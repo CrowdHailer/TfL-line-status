@@ -5,7 +5,8 @@ require 'json'
 
 class AppController < Sinatra::Base
   after do
-    headers({ 'Access-Control-Allow-Origin' => '*' })
+    headers({ 'X-Frame-Options' => 'ALLOW-FROM http://londonlayout-line-status.herokuapp.com/',
+  'Access-Control-Allow-Origin' => '*' })
   end
   get '/' do
     content_type :json
