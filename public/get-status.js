@@ -1,0 +1,3 @@
+function getLineStatus (){
+  alert('boo');
+}
