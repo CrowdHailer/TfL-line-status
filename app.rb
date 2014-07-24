@@ -16,8 +16,8 @@ class AppController < Sinatra::Base
       name = n.css('Line').attr('Name')
       description = n.attr('StatusDetails')
       status = n.css('Status').attr('Description')
-      statusClass = n.css('Status').attr('CssStatus')
-      results[name.split[0].downcase] = {description: description, status: status, class: statusClass}
+      statusClass = n.css('Status').attr('CssClass')
+      results[name.to_s.split[0].downcase] = {description: description, status: status, class: statusClass}
     end
     results.to_json
   end
