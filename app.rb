@@ -1,9 +1,7 @@
 require 'sinatra'
 require 'open-uri'
 require 'nokogiri'
-require 'awesome_print'
 require 'json'
-require 'crack'
 
 class AppController < Sinatra::Base
   get '/' do
