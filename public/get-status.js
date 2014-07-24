@@ -1,3 +1,5 @@
 function getLineStatus (){
-  alert('boo');
+  $.getJSON('http://londonlayout-line-status.herokuapp.com/', function(data){
+    return data;
+  });
 }
