@@ -4,6 +4,9 @@ require 'nokogiri'
 require 'json'
 
 class AppController < Sinatra::Base
+  after do
+    headers({ 'Access-Control-Allow-Origin' => '*' })
+  end
   get '/' do
     content_type :json
     data = Nokogiri.XML(open('http://cloud.tfl.gov.uk/TrackerNet/LineStatus'))
