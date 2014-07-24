@@ -4,6 +4,7 @@ ruby '2.1.0'
 
 gem 'sinatra'
 gem 'nokogiri'
+gem 'thin'
 
 group :test do
   gem 'rspec'
